@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shop.Dal.Modules
 {
-    class Grocery
+    public class Grocery
     {
         public Grocery()
         {

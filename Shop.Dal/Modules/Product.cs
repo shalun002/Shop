@@ -18,7 +18,7 @@ namespace Shop.Dal.Modules
         }
 
     }
-    class Product
+    public class Product
     {
         private double Price_;        
         public string Name { get; set; }

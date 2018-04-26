@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shop.Dal.Modules
 {
-    class ServiceProduct
+    public class ServiceProduct
     {
         private Random rand = new Random();
         public void GenerateProduct(Grocery shop)
@@ -17,10 +17,10 @@ namespace Shop.Dal.Modules
                 p.Barcode = rand.Next(10000, 30000);
                 p.Cur.CurCode = 398;
                 p.Cur.CurName = "KZT";
-                p.DateOfProduction = DateTime.Now.AddDays(rand.Next(0, -1000));
+                p.DateOfProduction = DateTime.Now.AddDays(-rand.Next(0, 1000));
                 p.ExpiredDay = rand.Next(1, 10);
                 p.ExpiredTime = DateTime.Now.AddDays(rand.Next(0, 20));
-                p.Name = string.Format("{Product # } {0}", rand.Next());
+                p.Name = string.Format("Product # {0}", rand.Next());
                 p.Price = rand.NextDouble();
                 shop.Products.Add(p);
             }
