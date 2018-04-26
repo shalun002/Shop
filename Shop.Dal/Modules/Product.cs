@@ -62,6 +62,21 @@ namespace Shop.Dal.Modules
             }
         }
 
+        public static Product operator > (Product a, Product b)
+        {
+            if (a.Price > b.Price)
+                return a;
+            else
+                return b;
+        }
+        public static Product operator < (Product a, Product b)
+        {
+            if (a.Price < b.Price)
+                return b;
+            else
+                return a;
+        }
+
         public void PrintInfo()
         {
             Console.WriteLine("{0} - {1} - {3} - {4} {5}", 
